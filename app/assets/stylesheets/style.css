@@ -1,0 +1,54 @@
+/* Estilos */
+
+  
+  .navbar-bg {
+    background-color: #e592cc;
+  }
+  
+  .tweet-form {
+    margin-bottom: 10px;
+  
+  }
+  
+  .boton1 {
+    background-color:  #08a0e9;
+    color: #ffffff;
+  }
+  
+  .boton2 {
+    color: #08a0e9;
+    border-color: #08a0e9;  
+  }
+  
+  .tweet-actions {
+    margin-top: 10px;
+  }
+  
+  .card-body:hover{
+  box-shadow: 0px 0px 12px 6px #4141415e;
+  }
+  
+  
+  .card-footer {
+    background-color:#E1E8ED ;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .buscar {
+    background-color: #F5F8FA;
+  }
+  
+  .iconos {
+    color:  #08a0e9;
+  }
+  
+  .footer {
+    background-color: #e592cc;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }

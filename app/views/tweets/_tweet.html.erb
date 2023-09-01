@@ -1,0 +1,22 @@
+<!--Posts-->
+<p style="color: green"><%= notice %></p>
+
+  <% @tweets.each do |tweet| %>
+  <div class="card my-2">
+    <div class="card-body">
+      <div class="media">
+        <div class="media-body">
+          <h5 class="mt-0"><%= image_tag("yinyang3.jpg", width: 40,class: "me-1", alt: "Foto Yin Yang")%>
+            <%= tweet.username %></h5>
+          <p><%= tweet.description %></p>
+          <div class="tweet-actions d-flex align-items-center">
+            <%= link_to 'Editar', edit_tweet_path(tweet.id), class: "btn btn-sm btn-outline-primary rounded-pill me-2" %>
+            <%= form_tag(tweet_path(tweet.id), method: :delete) do %>
+              <%= button_tag 'Borrar', type: 'submit', class: "btn btn-sm btn-outline-danger rounded-pill me-2" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>

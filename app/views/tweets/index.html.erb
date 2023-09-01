@@ -1,0 +1,44 @@
+<!-- Contenido principal -->
+<div class="col-lg-7 px-5">
+  <%= form_with model: Tweet.new, url: tweets_path, method: :post do |form| %>
+  <div class="tweet-form">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <%= form.text_area :description, class: "form-control buscar", placeholder: "Escribe tu post"  %>
+        </div>
+        <div class="form-group py-2 mt-3">
+          <%= form.text_field :username, class: "form-control buscar", placeholder: "Ingresa tu Usuario" %>
+        </div>
+          <%= form.submit "Enviar", class: "btn boton1 mt-3" %>
+        </div>
+    </div>
+  </div>
+  <% end %>
+
+  <!-- Posts y paginación -->
+  <%== pagy_bootstrap_nav(@pagy) %> <!--gema pagy-->
+  <%= render "tweet" %>
+  <%== pagy_bootstrap_nav(@pagy) %> <!--gema pagy-->
+</div>
+
+<div class="col-lg-3">
+  <!-- Sidebar Search -->
+  <div class="sidebar px-2">
+    <%= form_with url: root_path, method: :get do |form| %> <!--gema search-->
+    <!-- Cuadro de búsqueda de tweets anteriores -->
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="input-group">
+          <%= form.text_field :buscar, class: "form-control buscar", placeholder: "Buscar posts anteriores", value: @filtro %>
+          <%= form.submit 'Buscar', class: "btn btn-outline-primary" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+ 
+ 
+  </div>
+</div>
+</div>

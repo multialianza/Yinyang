@@ -1,0 +1,20 @@
+<!--Formulario update-->
+<p style="color: green"><%= notice %></p>
+
+<%= form_with(model: @tweet, url: tweet_path(@tweet), method: :patch) do |form| %>
+  <div class="tweet-form">
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <%= form.text_area :description, class: "form-control", placeholder: "Escribe tu tweet" %>
+        </div>
+        <div class="form-group py-2 mt-3">
+          <%= form.text_field :username, class: "form-control", placeholder: "Ingresa tu Usuario" %>
+        </div>
+        <%= form.submit "Enviar", class: "btn boton1 mt-3" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+

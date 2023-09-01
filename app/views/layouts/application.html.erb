@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YinYang</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('yinyang2.jpg') %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "style.css" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://kit.fontawesome.com/c7ac806bcc.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+  <!--Navbar-->
+
+  
+  <%= render "shared/navbar"%>
+
+  <div class="container-fluid pt-5 mt-5">
+    <%= yield %>
+  </div>
+
+  <%= render "shared/footer"%> 
+  
+  </body>
+</html>
